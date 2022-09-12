@@ -1,0 +1,42 @@
+body {
+  background-color: #282c34;
+  color: white;
+  padding: 40px;
+  font-family: Arial;
+  text-align: center;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+}
+#Personal {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+#personal-preview {
+  width: 60%;
+  min-width: 420px;
+}
+.personal-preview-info {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  height: 46px;
+}
+#personal-form {
+  height: 100%;
+  flex: 1 1 auto;
+  margin: 0 auto;
+  display: block;
+}
+#personal-form input {
+  height: 40px;
+  width: 90%;
+  display: block;
+  min-width: 420px;
+}
+h3 {
+  margin: 10px;
+}
