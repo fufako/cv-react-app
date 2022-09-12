@@ -1,13 +1,17 @@
 import React, { Component } from "react"
-import "./App.css"
+import Personal from "./components/Personal"
 
 class App extends Component {
-  constructor(props) {
-    super(props)
+  constructor() {
+    super()
   }
 
   render() {
-    return <div></div>
+    return (
+      <div>
+        <Personal />
+      </div>
+    )
   }
 }
 
