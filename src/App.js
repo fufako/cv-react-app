@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import Personal from "./components/Personal"
+import Experience from "./components/Experience"
 
 class App extends Component {
   constructor() {
@@ -10,6 +11,7 @@ class App extends Component {
     return (
       <div>
         <Personal />
+        <Experience />
       </div>
     )
   }
