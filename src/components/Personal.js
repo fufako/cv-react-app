@@ -59,6 +59,7 @@ class Personal extends Component {
       <div id="Personal">
         <div id="personal-form">
           <form>
+            <h3>Personal Information</h3>
             <input
               placeholder="First Name"
               onChange={(e) => {
@@ -95,6 +96,7 @@ class Personal extends Component {
                 this.updateDescription(e)
               }}
             />
+            <h3>Experience</h3>
             <input
               placeholder="Company"
               onChange={(e) => {

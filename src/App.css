@@ -1,3 +1,6 @@
+* {
+  outline: 1px solid red;
+}
 body {
   background-color: #282c34;
   color: white;
@@ -14,14 +17,19 @@ h1 {
 }
 #Personal {
   display: flex;
-  gap: 80px;
-  align-items: center;
-  justify-content: center;
-}
-#Personal {
-  margin-bottom: 40px;
+  justify-content: space-between;
+  margin: 0 15%;
 }
 #personal-preview {
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  text-align: center;
+  min-width: 400px;
+  color: #282c34;
+}
+#personal-form {
+  display: flex;
   height: 100%;
   padding: 2rem;
   border-radius: 5px;
@@ -36,15 +44,7 @@ h1 {
   flex: 1;
   height: 46px;
 }
-#personal-form {
-  height: 100%;
-  padding: 2rem;
-  border-radius: 5px;
-  background-color: rgb(238, 238, 238);
-  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
-  text-align: center;
-  min-width: 400px;
-}
+
 #personal-form input {
   height: 40px;
   width: 90%;
@@ -56,4 +56,41 @@ h1 {
 
 h3 {
   margin: 10px;
+  border-bottom: 1px solid black;
+  text-align: left;
+  color: #282c34;
+}
+.preview-header {
+  background-color: blue;
+  min-height: 100px;
+}
+.sidebars-container {
+  display: flex;
+  flex: 1;
+}
+#sidebar-left {
+  background-color: aliceblue;
+  flex: 1;
+}
+#sidebar-right {
+  background-color: bisque;
+  height: 100%;
+}
+.experience-info-container {
+  display: flex;
+}
+.company-info {
+  flex: 1;
+}
+.company-info p {
+  margin: 0;
+}
+#description {
+  text-align: left;
+}
+#description p {
+  margin-left: 10px;
+}
+.dates {
+  margin-left: 10px;
 }
