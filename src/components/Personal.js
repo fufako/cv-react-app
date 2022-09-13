@@ -1,9 +1,10 @@
+import { toHaveDisplayValue } from "@testing-library/jest-dom/dist/matchers"
 import React, { Component } from "react"
-import PersonalPreview from "./PersonalPreview"
+import Preview from "./Preview"
 
 class Personal extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       fname: "",
       lname: "",
@@ -11,6 +12,11 @@ class Personal extends Component {
       phone: "",
       mail: "",
       description: "",
+      company: "",
+      title: "",
+      city: "",
+      start: "",
+      end: "",
     }
   }
 
@@ -31,6 +37,21 @@ class Personal extends Component {
   }
   updateDescription = (e) => {
     this.setState({ description: e.target.value })
+  }
+  updateCompany = (e) => {
+    this.setState({ company: e.target.value })
+  }
+  updateTitle = (e) => {
+    this.setState({ title: e.target.value })
+  }
+  updateCity = (e) => {
+    this.setState({ city: e.target.value })
+  }
+  updateStart = (e) => {
+    this.setState({ start: e.target.value })
+  }
+  updateEnd = (e) => {
+    this.setState({ end: e.target.value })
   }
 
   render() {
@@ -74,34 +95,39 @@ class Personal extends Component {
                 this.updateDescription(e)
               }}
             />
+            <input
+              placeholder="Company"
+              onChange={(e) => {
+                this.updateCompany(e)
+              }}
+            />
+            <input
+              placeholder="Position"
+              onChange={(e) => {
+                this.updateTitle(e)
+              }}
+            />
+            <input
+              placeholder="City"
+              onChange={(e) => {
+                this.updateCity(e)
+              }}
+            />
+            <input
+              placeholder="From"
+              onChange={(e) => {
+                this.updateStart(e)
+              }}
+            />
+            <input
+              placeholder="To"
+              onChange={(e) => {
+                this.updateEnd(e)
+              }}
+            />
           </form>
         </div>
-        <div id="personal-preview">
-          <div id="first-name" className="personal-preview-info">
-            <h3>First Name</h3>
-            {this.state.fname}
-          </div>
-          <div id="last-name" className="personal-preview-info">
-            <h3>Last Name</h3>
-            {this.state.lname}
-          </div>
-          <div id="address" className="personal-preview-info">
-            <h3>First Name</h3>
-            {this.state.address}
-          </div>
-          <div id="phone" className="personal-preview-info">
-            <h3>Phone number</h3>
-            {this.state.phone}
-          </div>
-          <div id="mail" className="personal-preview-info">
-            <h3>E-Mail</h3>
-            {this.state.mail}
-          </div>
-          <div id="description" className="personal-preview-info">
-            <h3>Description</h3>
-            {this.state.description}
-          </div>
-        </div>
+        <Preview info={this.state} />
       </div>
     )
   }

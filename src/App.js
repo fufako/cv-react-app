@@ -1,20 +1,14 @@
 import React, { Component } from "react"
 import Personal from "./components/Personal"
-import Experience from "./components/Experience"
+import Header from "./components/Header"
 
-class App extends Component {
-  constructor() {
-    super()
-  }
-
-  render() {
-    return (
-      <div className="main">
-        <Personal />
-        <Experience />
-      </div>
-    )
-  }
+const App = () => {
+  return (
+    <div className="main">
+      <Header />
+      <Personal />
+    </div>
+  )
 }
 
 export default App
