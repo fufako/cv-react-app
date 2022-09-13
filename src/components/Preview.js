@@ -1,4 +1,5 @@
 import Personal from "./Personal"
+import avatar from "./images/placeholder.png"
 
 const Preview = (props) => {
   const info = props.info
@@ -24,15 +25,18 @@ const Preview = (props) => {
                 {info.start} -{info.end}
               </div>
               <div className="company-info">
-                <p>{info.company}</p>
-                <p>{info.city}</p>
+                <p>{info.title}</p>
+                <p>
+                  {info.company}, {info.city}
+                </p>
               </div>
             </div>
           </div>
         </div>
 
         <div id="sidebar-right">
-          <h5>First Name</h5>
+          <img src={avatar} alt="avatar_placeholder" />
+          <h5>Address</h5>
           {info.address}
           <h5>Phone number</h5>
           {info.phone}

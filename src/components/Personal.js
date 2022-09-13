@@ -91,6 +91,7 @@ class Personal extends Component {
               }}
             />
             <input
+              id="description-input"
               placeholder="Description"
               onChange={(e) => {
                 this.updateDescription(e)
