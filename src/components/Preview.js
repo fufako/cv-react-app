@@ -25,9 +25,26 @@ const Preview = (props) => {
                 {info.start} -{info.end}
               </div>
               <div className="company-info">
-                <p>{info.title}</p>
+                <p id="experience-bold">{info.title}</p>
                 <p>
                   {info.company}, {info.city}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div id="experience-preview">
+            <h3>Education</h3>
+            <div className="experience-info-container">
+              <div className="dates">
+                {info.from} -{info.to}
+              </div>
+              <div className="company-info">
+                <p id="experience-bold">
+                  {info.university}, {info.uniCity}
+                </p>
+                <p>
+                  Degree: {info.degree} <br />
+                  Subject: {info.subject}
                 </p>
               </div>
             </div>

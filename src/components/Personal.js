@@ -17,6 +17,12 @@ class Personal extends Component {
       city: "",
       start: "",
       end: "",
+      university: "",
+      uniCity: "",
+      degree: "",
+      subject: "",
+      from: "",
+      to: "",
     }
   }
 
@@ -52,6 +58,24 @@ class Personal extends Component {
   }
   updateEnd = (e) => {
     this.setState({ end: e.target.value })
+  }
+  updateUniversity = (e) => {
+    this.setState({ university: e.target.value })
+  }
+  updateUniCity = (e) => {
+    this.setState({ uniCity: e.target.value })
+  }
+  updateDegree = (e) => {
+    this.setState({ degree: e.target.value })
+  }
+  updateSubject = (e) => {
+    this.setState({ subject: e.target.value })
+  }
+  updateFrom = (e) => {
+    this.setState({ from: e.target.value })
+  }
+  updateTo = (e) => {
+    this.setState({ to: e.target.value })
   }
 
   render() {
@@ -126,6 +150,43 @@ class Personal extends Component {
               placeholder="To"
               onChange={(e) => {
                 this.updateEnd(e)
+              }}
+            />
+            <h3>Education</h3>
+            <input
+              placeholder="University name"
+              onChange={(e) => {
+                this.updateUniversity(e)
+              }}
+            />
+            <input
+              placeholder="City"
+              onChange={(e) => {
+                this.updateUniCity(e)
+              }}
+            />
+            <input
+              placeholder="Degree"
+              onChange={(e) => {
+                this.updateDegree(e)
+              }}
+            />
+            <input
+              placeholder="Subject"
+              onChange={(e) => {
+                this.updateSubject(e)
+              }}
+            />
+            <input
+              placeholder="Form"
+              onChange={(e) => {
+                this.updateFrom(e)
+              }}
+            />
+            <input
+              placeholder="To"
+              onChange={(e) => {
+                this.updateTo(e)
               }}
             />
           </form>
